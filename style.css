@@ -5,37 +5,32 @@
   --primary-light: #fddfe7;
   --secondary: #072bce;
 
-  --header-height: 480px;
+  --giant-text: 40px; /* supposed to be 40 */
 
-  --giant-text-mobile: 40px; /* supposed to be 40 */
-  --giant-text-desktop: 82px; /* supposed to be 82 */
+  --very-big-text: 24px; /* supposed to be 24 */
 
-  --very-big-text-mobile: 24px; /* supposed to be 24 */
-  --very-big-text-desktop: 50px; /* supposed to be 50 */
+  --medium-big-text: 22px; /* supposed to be 22 */
 
-  --medium-big-text-mobile: 22px; /* supposed to be 22 */
-  --medium-big-text-desktop: 48px; /* supposed to be 48 */
+  --more-big-text: 21px; /* supposed to be 21 */
 
-  --more-big-text-mobile: 21px; /* supposed to be 21 */
-  --more-big-text-desktop: 38px; /* supposed to be 38 */
+  --big-text: 17px; /* supposed to be 17 */
 
-  --big-text-mobile: 17px; /* supposed to be 17 */
-  --big-text-desktop: 30px; /* supposed to be 30 */
+  --less-big-text: 17px; /* supposed to be 17 */
 
-  --less-big-text-mobile: 17px; /* supposed to be 17 */
-  --less-big-text-desktop: 25px; /* supposed to be 25 */
+  --bigger-medium-text: 21px; /* supposed to be 21 */
 
-  --bigger-medium-text-mobile: 21px; /* supposed to be 21 */
-  --bigger-medium-text-desktop: 30px; /* supposed to be 30 */
+  --medium-text: 13px; /* supposed to be 13 */
 
-  --medium-text-mobile: 13px; /* supposed to be 13 */
-  --medium-text-desktop: 28px; /* supposed to be 28 */
+  --small-text: 11px; /* supposed to be 11 */
 
-  --small-text-mobile: 0;
-  --small-text-desktop: 0;
+  --very-small-text: 9px; /* supposed to be 9 */
 
-  --very-small-text-mobile: 9px; /* supposed to be 9 */
-  --very-small-text-desktop: 16px; /* supposed to be 16 */
+
+  --header-height: 400px;
+  --small-circle: calc(var(--very-big-text) * 1.6);
+  --fab-header: calc(var(--very-big-text) * 0.8);
+  --medium-circle: calc(var(--giant-text) * 1.6);
+  --fab-more: calc(var(--giant-text) * 0.8);
 }
 
 * {
@@ -91,9 +86,27 @@ header {
   justify-content: flex-start;
 }
 
+.social-url {
+  text-decoration: none;
+  color: var(--white);
+  font-size: var(--fab-header);
+}
+
+.circle-social-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+  width: var(--small-circle);
+  height: var(--small-circle);
+}
+
+
 .portfolio-name {
   font-family: "Roboto", sans-serif;
-  font-size: var(--medium-text-mobile);
+  font-size: var(--medium-text);
   line-height: 138%;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -108,12 +121,12 @@ header {
 }
 
 .dev-title {
-  font-size: var(--giant-text-mobile);
+  font-size: var(--giant-text);
   line-height: 122%;
 }
 
 .other-title {
-  font-size: var(--very-big-text-mobile);
+  font-size: var(--very-big-text);
   line-height: 167%;
 }
 
@@ -126,11 +139,18 @@ header {
   width: 85%;
   max-width: 1000px;
   margin: 0 auto;
-  margin-top: 0 auto;
 }
 
+.section-box {
+  padding: 60px 0;
+}
+
+/* .section-box {
+  overflow: auto;
+} */
+
 .intro-text {
-  font-size: var(--big-text-mobile);
+  font-size: var(--big-text);
   line-height: 171%;
   text-align: left;
 }
@@ -152,6 +172,12 @@ header {
   display: inline-block;
 }
 
+.tech-text {
+  font-size: var(--big-text);
+  line-height: 171%;
+  text-align: center;
+}
+
 .heading-box {
   display: flex;
   justify-content: center;
@@ -164,7 +190,7 @@ header {
   padding: 0 3px;
   color: var(--white);
   background-color: var(--primary);
-  font-size: var(--medium-big-text-mobile);
+  font-size: var(--medium-big-text);
   line-height: 122%;
 }
 
@@ -188,7 +214,7 @@ header {
   color: var(--primary);
   letter-spacing: 0.01em;
   margin-bottom: 15px;
-  font-size: var(--less-big-text-mobile);
+  font-size: var(--less-big-text);
   line-height: 171%;
 }
 
@@ -198,14 +224,14 @@ header {
   color: var(--primary);
   letter-spacing: 0.01em;
   margin-bottom: 15px;
-  font-size: var(--less-big-text-mobile);
+  font-size: var(--less-big-text);
   line-height: 132%;
 }
 
 .project-text {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.01em;
-  font-size: var(--less-big-text-mobile);
+  font-size: var(--less-big-text);
   line-height: 171%;
   display: inline-block;
   margin: 10px 0;
@@ -213,7 +239,8 @@ header {
 
 .tags {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
+  flex-wrap: wrap;
   margin-bottom: 40px;
 }
 
@@ -221,7 +248,7 @@ header {
   display: flex;
   align-items: center;
   font-family: "Roboto", sans-serif;
-  font-size: var(--very-small-text-mobile);
+  font-size: var(--very-small-text);
   line-height: 122%;
   text-align: center;
   letter-spacing: 0.01em;
@@ -233,7 +260,7 @@ header {
 .second-heading {
   font-family: "Roboto", sans-serif;
   color: var(--primary);
-  font-size: var(--more-big-text-mobile);
+  font-size: var(--more-big-text);
   line-height: 119%;
   text-transform: uppercase;
 }
@@ -243,14 +270,14 @@ header {
   text-transform: uppercase;
   color: var(--primary);
   margin-bottom: 15px;
-  font-size: var(--less-big-text-mobile);
+  font-size: var(--less-big-text);
   line-height: 176%;
   margin-top: 30px;
 }
 
 .article-title {
   font-family: "Roboto", sans-serif;
-  font-size: var(--bigger-medium-text-mobile);
+  font-size: var(--bigger-medium-text);
   line-height: 143%;
   margin-bottom: 5px;
 }
@@ -259,20 +286,20 @@ header {
   display: inline-block;
   margin: 10px 0;
   font-family: "Roboto", sans-serif;
-  font-size: var(--less-big-text-mobile);
+  font-size: var(--less-big-text);
   line-height: 188%;
 }
 
 .small-title.datemore {
   font-family: "Roboto", sans-serif;
-  font-size: var(--less-big-text-mobile);
+  font-size: var(--less-big-text);
   line-height: 171%;
   text-transform: uppercase;
 }
 
 .article-title.more {
   font-family: "Roboto", sans-serif;
-  font-size: var(--less-big-text-mobile);
+  font-size: var(--less-big-text);
   line-height: 171%;
 }
 
@@ -287,63 +314,133 @@ header {
   font-family: "Roboto", sans-serif;
   color: var(--primary);
   text-transform: uppercase;
-  font-size: var(--less-big-text-mobile);
+  font-size: var(--less-big-text);
   line-height: 171%;
 }
 
 .skills-list {
-    font-family: "Roboto", sans-serif;
-    list-style-type: none;
-    margin: 0;
-    font-size: var( --less-big-text-mobile);
-    line-height: 171%;
-    letter-spacing: 0.01em;
-    padding: 6px 0 0 0;
+  font-family: "Roboto", sans-serif;
+  list-style-type: none;
+  margin: 0;
+  font-size: var(--less-big-text);
+  line-height: 171%;
+  letter-spacing: 0.01em;
+  padding: 6px 0 0 0;
+}
+
+.more-socials {
+  display: flex;
+  justify-content: center;
+}
+.social-url-more {
+  text-decoration: none;
+  color: var(--primary);
+  font-size: var(--fab-more);
+}
+
+.icon-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 12px;
+}
+
+.circle-social-more {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  width: var(--medium-circle);
+  height: var(--medium-circle);
+  margin-bottom: 16px;
+}
+
+.small-title.social {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  font-size: var(--small-text);
+  line-height: 118%;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 footer {
-    height: var(--header-height);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--secondary);
-    color: var(--white)
+  height: var(--header-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary);
+  color: var(--white);
 }
 
 .footer-heading {
-    color: var(--white);
-    text-transform: uppercase;
-    font-size: var(--more-big-text-mobile);
-    line-height: 119%;
+  color: var(--white);
+  text-transform: uppercase;
+  font-size: var(--more-big-text);
+  line-height: 119%;
 }
 
 .footer-details {
-    font-size: var(--big-text-mobile);
-    line-height: 147%;
-    text-align: center;
+  font-size: var(--big-text);
+  line-height: 147%;
+  text-align: center;
 }
 
+/* ---------- Media query for desktop ---------- */
+
 @media screen and (min-width: 1025px) {
+  :root {
+    --header-height: 600px;
+
+    --giant-text: 82px; /* supposed to be 82 */
+
+    --very-big-text: 50px; /* supposed to be 50 */
+
+    --medium-big-text: 48px; /* supposed to be 48 */
+
+    --more-big-text: 38px; /* supposed to be 38 */
+
+    --big-text: 30px; /* supposed to be 30 */
+
+    --less-big-text: 25px; /* supposed to be 25 */
+
+    --bigger-medium-text: 30px; /* supposed to be 30 */
+
+    --medium-text: 28px; /* supposed to be 28 */
+
+    --small-text: 25px; /* supposed to be 25 */
+
+    --very-small-text: 16px; /* supposed to be 16 */
+  }
+
+  header,
+  footer {
+    height: var(--header-height);
+  }
+
   /* figma CSS data */
   .portfolio-name {
-    font-size: var(--medium-text-desktop);
+    /* font-size: var(--medium-text); */
     line-height: 132%;
   }
 
   /* figma CSS data */
-  .dev-title {
-    font-size: var(--giant-text-desktop);
-  }
+  /* .dev-title { */
+  /* font-size: var(--giant-text); */
+  /* } */
 
   /* figma CSS data */
   .other-title {
-    font-size: var(--very-big-text-desktop);
+    /* font-size: var(--very-big-text); */
     line-height: 156%;
   }
 
   .intro-text {
-    font-size: var(--big-text-desktop);
+    /* font-size: var(--big-text); */
     line-height: 167%;
     text-align: left;
   }
@@ -365,9 +462,15 @@ footer {
     display: inline-block;
   }
 
+  .tech-text {
+    /* font-size: var(--big-text); */
+    line-height: 167%;
+    letter-spacing: 0.01em;
+  }
+
   .section-heading {
     padding: 0 8px;
-    font-size: var(--medium-big-text-desktop);
+    /* font-size: var(--medium-big-text); */
     line-height: 122%;
   }
 
@@ -379,42 +482,42 @@ footer {
 
   .small-title.project {
     line-height: 164%;
-    font-size: var(--less-big-text-desktop);
+    /* font-size: var(--less-big-text); */
   }
 
   .project-text {
-    font-size: var(--less-big-text-desktop);
+    /* font-size: var(--less-big-text); */
     line-height: 164%;
   }
 
   .tech-tag {
-    font-size: var(--very-small-text-desktop);
+    /* font-size: var(--very-small-text); */
     line-height: 131%;
   }
 
   .second-heading {
-    font-size: var(--more-big-text-desktop);
+    /* font-size: var(--more-big-text); */
     line-height: 124%;
   }
 
   .small-title.other {
-    font-size: var(--less-big-text-desktop);
+    /* font-size: var(--less-big-text); */
     line-height: 164%;
     text-decoration-line: underline;
   }
 
   .small-title.date {
-    font-size: var(--less-big-text-desktop);
+    /* font-size: var(--less-big-text); */
     line-height: 164%;
   }
 
   .article-title {
-    font-size: var(--bigger-medium-text-desktop);
+    /* font-size: var(--bigger-medium-text); */
     line-height: 137%;
   }
 
   .article-text {
-    font-size: var(--less-big-text-desktop);
+    /* font-size: var(--less-big-text); */
     line-height: 164%;
   }
 
@@ -425,12 +528,12 @@ footer {
   }
 
   .small-title.datemore {
-    font-size: var(--less-big-text-desktop);
+    /* font-size: var(--less-big-text); */
     line-height: 132%;
   }
 
   .article-title.more {
-    font-size: var(--less-big-text-desktop);
+    /* font-size: var(--less-big-text); */
     line-height: 132%;
   }
 
@@ -439,7 +542,7 @@ footer {
   }
 
   .second-heading-skills {
-    font-size: var(--less-big-text-desktop);
+    /* font-size: var(--less-big-text); */
     line-height: 164%;
   }
 
@@ -447,23 +550,25 @@ footer {
     font-family: "Roboto", sans-serif;
     list-style-type: none;
     margin: 0;
-    font-size: var( --less-big-text-desktop);
+    /* font-size: var( --less-big-text); */
     line-height: 164%;
     letter-spacing: 0.01em;
     padding: 6px 0 0 0;
-}
+  }
 
-.footer-heading {
+  .small-title.social {
+    line-height: 164%;
+  }
+
+  .footer-heading {
     color: var(--white);
     text-transform: uppercase;
-    font-size: var(--more-big-text-desktop);
+    /* font-size: var(--more-big-text); */
     line-height: 124%;
-}
+  }
 
-.footer-details {
-    font-size: var(--big-text-desktop);
+  .footer-details {
+    /* font-size: var(--big-text); */
     line-height: 167%;
-}
-
-
+  }
 }
