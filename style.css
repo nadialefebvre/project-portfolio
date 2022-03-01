@@ -17,10 +17,6 @@
   --very-small-text: 9px; /* supposed to be 9 */
 
   --header-height: 400px;
-  --small-circle: calc(var(--very-big-text) * 1.6);
-  --fab-header: calc(var(--very-big-text) * 0.8);
-  --medium-circle: calc(var(--giant-text) * 1.6);
-  --fab-more: calc(var(--giant-text) * 0.8);
 }
 
 * {
@@ -84,18 +80,18 @@ a {
 .header-socials-link {
   text-decoration: none;
   color: var(--white);
-  font-size: var(--fab-header);
+  font-size: 16px;
 }
 
 .header-socials-circle {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 8px;
-  border: 2px solid var(--white);
+  margin-left: 5px;
+  border: 1.5px solid var(--white);
   border-radius: 50%;
-  width: var(--small-circle);
-  height: var(--small-circle);
+  width: 40px;
+  height: 40px;
 }
 
 .portfolio-name {
@@ -110,15 +106,12 @@ a {
   font-weight: 700;
 }
 
-.normal {
-  font-weight: 400;
-}
-
 .color {
   color: var(--primary);
 }
 
 .dev-title {
+  /* letter-spacing doesn't seem to be 0 in Figma... */
   font-size: var(--giant-text);
   line-height: 122%;
 }
@@ -137,8 +130,8 @@ a {
 }
 
 .section-box {
-  width: 100%;
-  max-width: 375px;
+  width: 325px;
+  /* max-width: 375px; */
   margin: 0 auto;
   padding: 60px 0; /* à appliquer au header??? */
 }
@@ -185,7 +178,7 @@ a {
 .section-heading {
   text-align: center;
   text-transform: uppercase;
-  padding: 0 3px;
+  padding: 0 4px;
   color: var(--white);
   background-color: var(--primary);
   font-size: var(--medium-big-text);
@@ -238,6 +231,10 @@ a {
   line-height: 132%;
 }
 
+.other-project-space {
+  display: none;
+}
+
 .project-description {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.01em;
@@ -268,7 +265,6 @@ a {
 }
 
 .section-subheading {
-  font-family: "Roboto", sans-serif;
   color: var(--primary);
   font-size: var(--more-big-text);
   line-height: 119%;
@@ -277,7 +273,6 @@ a {
 
 .main-article-date {
   font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
   font-size: var(--less-big-text);
   line-height: 176%;
 }
@@ -296,21 +291,23 @@ a {
   line-height: 188%;
 }
 
+.other-article-title {
+  font-family: "Roboto", sans-serif;
+  font-size: var(--less-big-text);
+  line-height: 171%;
+  text-decoration-line: underline;
+}
+
 .other-article-date {
   font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
   font-size: var(--less-big-text);
   font-weight: 400;
   line-height: 171%;
   text-decoration-line: underline;
 }
 
-.other-article-title {
-  font-family: "Roboto", sans-serif;
-  font-size: var(--less-big-text);
-  line-height: 171%;
+.other-article-arrows {
   text-decoration-line: underline;
-
 }
 
 .skills-box {
@@ -321,6 +318,7 @@ a {
 }
 
 .section-subheading.skills {
+  font-family: "Roboto", sans-serif;
   font-size: var(--less-big-text);
   line-height: 171%;
 }
@@ -343,7 +341,7 @@ a {
 .more-socials-link {
   text-decoration: none;
   color: var(--primary);
-  font-size: var(--fab-more);
+  font-size: 24px;
 }
 
 .icon-box {
@@ -360,8 +358,8 @@ a {
   align-items: center;
   border: 2px solid var(--primary);
   border-radius: 50%;
-  width: var(--medium-circle);
-  height: var(--medium-circle);
+  width: 60px;
+  height: 60px;
   margin-bottom: 16px;
 }
 
@@ -401,13 +399,13 @@ footer {
 
 @media screen and (min-width: 768px) {
   .section-box {
-    max-width: 768px;
+    width: 718px;
   }
 }
 
 /* ---------- Media query for desktop ---------- */
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 1150px) {
   :root {
     --header-height: 600px;
 
@@ -429,7 +427,18 @@ footer {
   }
 
   .section-box {
-    max-width: 1100px;
+    width: 1100px;
+  }
+
+  .header-socials-circle {
+    width: 80px;
+    height: 80px;
+    margin-left: 10px;
+    border: 2px solid var(--white);
+  }
+  
+  .header-socials-link {
+    font-size: 32px;
   }
 
   /* figma CSS data */
@@ -455,16 +464,16 @@ footer {
 
   /* CSS data in common pitfalls doc */
   .intro-line {
-    border: 1px solid var(--primary);
-    width: 40px;
+    border: 2px solid var(--primary);
+    width: 80px;
     display: inline-block;
-    margin-bottom: 4px;
+    margin-bottom: 8px;
   }
 
   /* CSS data in common pitfalls doc */
   .intro-dot {
-    height: 10px;
-    width: 10px;
+    height: 20px;
+    width: 20px;
     background-color: var(--primary);
     border-radius: 50%;
     display: inline-block;
@@ -476,7 +485,7 @@ footer {
   }
 
   .section-heading {
-    padding: 0 8px;
+    padding: 2px 16px;
     line-height: 122%;
   }
 
@@ -495,7 +504,7 @@ footer {
   }
 
   .project-description.other {
-    /* text-decoration-line: underline; */
+    text-decoration-line: underline;
   }
 
   .tag {
@@ -506,13 +515,21 @@ footer {
     line-height: 124%;
   }
 
-  .other-article-text {
+  .other-project-text {
     display: flex;
     }
 
   .other-project-title {
     line-height: 164%;
-    /* text-decoration-line: underline; */
+    text-decoration-line: underline;
+  }
+
+  .other-project-space {
+    display: inline;
+  }
+
+  .other-project-arrows {
+    text-decoration-line: underline;
   }
 
   .main-article-date {
@@ -556,6 +573,16 @@ footer {
     line-height: 164%;
     letter-spacing: 0.01em;
     padding: 6px 0 0 0;
+  }
+
+  .more-socials-circle {
+    border: 4px solid var(--primary);
+    width: 160px;
+    height: 160px;
+  }
+
+  .more-socials-link {
+    font-size: 60px;
   }
 
   .icon-heading {
