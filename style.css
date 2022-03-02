@@ -15,8 +15,6 @@
   --medium-text: 13px; /* supposed to be 13 */
   --small-text: 11px; /* supposed to be 11 */
   --very-small-text: 9px; /* supposed to be 9 */
-
-  --header-height: 400px;
 }
 
 * {
@@ -42,7 +40,7 @@ a {
 
 .header {
   /* width: 100%; */
-  height: var(--header-height);
+  height: 520px;
   background-image: linear-gradient(
       rgba(32, 32, 32, 0.5),
       rgba(32, 32, 32, 0.5)
@@ -55,7 +53,7 @@ a {
 }
 
 .header,
-.header .section-box {
+.header-box {
   position: relative;
 }
 
@@ -129,16 +127,16 @@ a {
   background-color: var(--white);
 }
 
+.header-box,
 .section-box {
   width: 325px;
   /* max-width: 375px; */
   margin: 0 auto;
-  padding: 60px 0; /* à appliquer au header??? */
 }
 
-/* .section-box {
-  overflow: auto;
-} */
+.section {
+  padding: 40px 0;
+}
 
 .intro-text {
   font-size: var(--big-text);
@@ -172,7 +170,13 @@ a {
 .heading-box {
   display: flex;
   justify-content: center;
-  margin: 20px 0;
+  margin-bottom: 40px;
+}
+
+.subheading-box {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 .section-heading {
@@ -229,10 +233,6 @@ a {
   /* margin-bottom: 15px; */
   font-size: var(--less-big-text);
   line-height: 132%;
-}
-
-.other-project-space {
-  display: none;
 }
 
 .project-description {
@@ -317,10 +317,12 @@ a {
   margin-bottom: 40px;
 }
 
-.section-subheading.skills {
+.skills-subheading {
+  color: var(--primary);
   font-family: "Roboto", sans-serif;
   font-size: var(--less-big-text);
   line-height: 171%;
+  text-transform: uppercase;
 }
 
 .skills-list {
@@ -373,7 +375,7 @@ a {
 }
 
 footer {
-  height: var(--header-height);
+  height: 302px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -398,17 +400,46 @@ footer {
 /* ---------- Media query for tablet ---------- */
 
 @media screen and (min-width: 768px) {
-  .section-box {
-    width: 718px;
+  :root {
+/* average between mobile and desktop font sizes */
+    --giant-text: 61px; /* supposed to be 40 */
+    --very-big-text: 37px; /* supposed to be 24 */
+    --medium-big-text: 35px; /* supposed to be 22 */
+    --more-big-text: 30px; /* supposed to be 21 */
+    --big-text: 24px; /* supposed to be 17 */
+    --less-big-text: 21px; /* supposed to be 17 */
+    --bigger-medium-text: 26px; /* supposed to be 21 */
+    --medium-text: 21px; /* supposed to be 13 */
+    --small-text: 18px; /* supposed to be 11 */
+    --very-small-text: 13px; /* supposed to be 9 */
   }
+
+
+
+  .header-box,
+  .section-box {
+      width: 718px;
+  }
+
+  .section {
+    padding: 80px 0;
+  }
+
+  .heading-box {
+    margin-bottom: 60px;
+  }
+
+  .subheading-box {
+    margin-top: 65px;
+    margin-bottom: 30px;
+  }
+  
 }
 
 /* ---------- Media query for desktop ---------- */
 
 @media screen and (min-width: 1150px) {
   :root {
-    --header-height: 600px;
-
     --giant-text: 82px; /* supposed to be 82 */
     --very-big-text: 50px; /* supposed to be 50 */
     --medium-big-text: 48px; /* supposed to be 48 */
@@ -421,13 +452,21 @@ footer {
     --very-small-text: 16px; /* supposed to be 16 */
   }
 
-  .header,
-  .footer {
-    height: var(--header-height);
+  .header {
+    height: 668px;
   }
 
+  .footer {
+    height: 570px;
+  }
+
+  .header-box,
   .section-box {
-    width: 1100px;
+      width: 1100px;
+  }
+
+  .section {
+    padding: 120px 0;
   }
 
   .header-socials-circle {
@@ -484,6 +523,15 @@ footer {
     letter-spacing: 0.01em;
   }
 
+  .heading-box {
+    margin-bottom: 80px;
+  }
+
+  .subheading-box {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+
   .section-heading {
     padding: 2px 16px;
     line-height: 122%;
@@ -505,6 +553,11 @@ footer {
 
   .project-description.other {
     text-decoration-line: underline;
+  }
+
+  /* adding a space before other project description only on desktop view */
+  .project-description.other::before {
+    content: "\00a0";
   }
 
   .tag {
@@ -562,7 +615,7 @@ footer {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  .section-subheading.skills {
+  .skills-subheading {
     line-height: 164%;
   }
 
