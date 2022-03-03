@@ -52,9 +52,9 @@ a {
   background-size: cover;
 }
 
-.header,
 .header-box {
   position: relative;
+  height: 520px;
 }
 
 .header-socials {
@@ -66,25 +66,20 @@ a {
 }
 
 .header-text-box {
-  position: relative;
-  top: 121px;
+  position: absolute;
+  /* I tweaked a little bit the top position since I added a second subtitle */
+  top: 130px;
   left: 0;
   color: var(--white);
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  /* justify-content: flex-start; */
 }
 
 .header-socials-link {
   text-decoration: none;
   color: var(--white);
   font-size: 16px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-socials-link:hover {
-  transform: scale(1.12);
-  color: var(--primary);
 }
 
 .header-socials-circle {
@@ -96,6 +91,15 @@ a {
   border-radius: 50%;
   width: 40px;
   height: 40px;
+}
+
+.header-profile-picture {
+  width: 180px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+  position: absolute;
+  bottom: -16px;
+  right: 0;
 }
 
 .portfolio-name {
@@ -135,7 +139,7 @@ a {
 
 .header-box,
 .section-box {
-  width: 325px;
+  width: 327px;
   /* max-width: 375px; */
   margin: 0 auto;
 }
@@ -195,7 +199,13 @@ a {
   line-height: 122%;
 }
 
-.image-box {
+.projects-box article,
+.thoughts-box article {
+  width: 327px;
+}
+
+.project-image-box,
+.article-image-box {
   position: relative;
   margin-top: 32px;
 }
@@ -206,30 +216,34 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(100, 100, 55, 0.4);
+  background: rgba(100, 100, 100, 0.4);
+  color: var(--white);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--white);
+  text-align: center;
   text-transform: uppercase;
   font-size: 28px;
   transition: 0.3s ease;
-
 }
 
 .image-overlay:hover {
   background-color: transparent;
   color: transparent;
+
 }
 
+.project-image,
 .article-image {
   width: 100%;
   /* important so there isn't a line with overlay below : it can be inherit, flex, block, to check*/
   display: inherit;
-
-  /* height: 250px;
-  display: block;
+  /* height: 212px; */
+  /* is it useful? */
   object-fit: cover;
+  /*
+  display: block;
+  
   object-position: 0 0; */
 }
 
@@ -344,10 +358,11 @@ a {
 }
 
 .skills-box {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
   text-align: center;
-  margin-bottom: 40px;
   row-gap: 29px;
 }
 
@@ -362,11 +377,9 @@ a {
 .skills-list {
   font-family: "Roboto", sans-serif;
   list-style-type: none;
-  /* margin: 0; */
   font-size: var(--less-big-text);
   line-height: 171%;
   letter-spacing: 0.01em;
-  /* padding: 6px 0 0 0; */
 }
 
 .more-socials {
@@ -386,11 +399,6 @@ a {
   justify-content: center;
   flex-direction: column;
   margin: 0 12px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.icon-box:hover {
-  transform: scale(1.12);
 }
 
 .more-socials-circle {
@@ -413,7 +421,7 @@ a {
   text-transform: uppercase;
 }
 
-footer {
+.footer {
   height: 302px;
   display: flex;
   flex-direction: column;
@@ -454,9 +462,41 @@ footer {
     --very-small-text: 13px; /* supposed to be 9 */
   }
 
+  .header,
+  .header-box {
+    height: 594px;
+  }
+
   .header-box,
   .section-box {
     width: 718px;
+  }
+
+  .header-socials {
+    top: 75px;
+  }
+
+  .header-text-box {
+    /* I tweaked a little bit the top position since I added a second subtitle */
+    top: 160px;
+  }
+
+  .header-profile-picture {
+    width: 257px;
+    bottom: -28px;
+  }
+
+  /* CSS data in common pitfalls doc */
+  .intro-line {
+    border-width: 1.5px;
+    width: 60px;
+    margin-bottom: 6px;
+  }
+
+  /* CSS data in common pitfalls doc */
+  .intro-dot {
+    height: 15px;
+    width: 15px;
   }
 
   .section {
@@ -471,11 +511,23 @@ footer {
     margin-top: 65px;
     margin-bottom: 30px;
   }
+
+  .projects-box,
+  .thoughts-box {
+    display: flex;
+    flex-wrap: wrap;
+    /* grid-template-columns: repeat(2, 1fr); */
+    column-gap: 44px;
+  }
+
+  .footer {
+    height: 436px;
+  }
 }
 
 /* ---------- Media query for desktop ---------- */
 
-@media screen and (min-width: 1150px) {
+@media screen and (min-width: 1148px) {
   :root {
     --giant-text: 82px; /* supposed to be 82 */
     --very-big-text: 50px; /* supposed to be 50 */
@@ -489,8 +541,23 @@ footer {
     --very-small-text: 16px; /* supposed to be 16 */
   }
 
-  .header {
+  .header,
+  .header-box {
     height: 668px;
+  }
+
+  .header-socials {
+    top: 102px;
+  }
+
+  .header-text-box {
+    /* I tweaked a little bit the top position since I added a second subtitle */
+    top: 190px;
+  }
+
+  .header-profile-picture {
+    width: 333px;
+    bottom: -40px;
   }
 
   .footer {
@@ -515,6 +582,12 @@ footer {
 
   .header-socials-link {
     font-size: 32px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-socials-link:hover {
+    transform: scale(1.12);
+    color: var(--primary);
   }
 
   /* figma CSS data */
@@ -540,9 +613,8 @@ footer {
 
   /* CSS data in common pitfalls doc */
   .intro-line {
-    border: 2px solid var(--primary);
+    border-width: 2px;
     width: 80px;
-    display: inline-block;
     margin-bottom: 8px;
   }
 
@@ -550,9 +622,6 @@ footer {
   .intro-dot {
     height: 20px;
     width: 20px;
-    background-color: var(--primary);
-    border-radius: 50%;
-    display: inline-block;
   }
 
   .tech-text {
@@ -574,15 +643,27 @@ footer {
     line-height: 122%;
   }
 
-  .projects-box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 44px;
-  }
-
   .main-project-title {
     margin-top: 45px;
     line-height: 164%;
+  }
+
+  .projects-box article,
+  .thoughts-box article {
+    width: 523px;
+  }
+
+  .project-image-box,
+  .article-image-box {
+    position: relative;
+    margin-top: 45px;
+  }
+
+  .project-image,
+  .article-image {
+    width: 100%;
+    /* height: 306px; */
+  
   }
 
   .project-description {
@@ -637,22 +718,12 @@ footer {
     line-height: 164%;
   }
 
-  .thoughts-box {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    column-gap: 44px;
-  }
-
   .other-article-date {
     line-height: 132%;
   }
 
   .other-article-title {
     line-height: 132%;
-  }
-
-  .skills-box {
-    grid-template-columns: repeat(4, 1fr);
   }
 
   .skills-subheading {
@@ -672,6 +743,12 @@ footer {
     border: 4px solid var(--primary);
     width: 160px;
     height: 160px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .more-socials-circle:hover {
+    transform: scale(1.12);
+    color: var(--secondary);
   }
 
   .more-socials-link {
