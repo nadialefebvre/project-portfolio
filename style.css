@@ -75,13 +75,18 @@ a {
   color: var(--white);
   display: flex;
   flex-direction: column;
-  /* justify-content: flex-start; */
 }
 
 .header-socials-link {
   text-decoration: none;
   color: var(--white);
   font-size: 16px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.header-socials-link:hover {
+  transform: scale(1.12);
+  color: var(--primary);
 }
 
 .header-socials-circle {
@@ -106,6 +111,7 @@ a {
 
 .portfolio-name {
   font-family: "Roboto", sans-serif;
+  font-weight: 400;
   font-size: var(--medium-text);
   line-height: 138%;
   letter-spacing: 0.04em;
@@ -119,6 +125,12 @@ a {
 .color {
   color: var(--primary);
 }
+
+.underline {
+  text-decoration-line: underline;
+  text-underline-position: under;
+}
+
 
 .dev-title {
   /* letter-spacing doesn't seem to be 0 in Figma... */
@@ -142,7 +154,6 @@ a {
 .header-box,
 .section-box {
   width: 327px;
-  /* max-width: 375px; */
   margin: 0 auto;
 }
 
@@ -232,7 +243,6 @@ a {
 .image-overlay:hover {
   background-color: transparent;
   color: transparent;
-
 }
 
 .project-image,
@@ -242,11 +252,8 @@ a {
   display: inherit;
   /* height: 212px; */
   /* is it useful? */
+  -o-object-fit: cover;
   object-fit: cover;
-  /*
-  display: block;
-  
-  object-position: 0 0; */
 }
 
 .main-project-title {
@@ -264,7 +271,6 @@ a {
   text-transform: uppercase;
   color: var(--primary);
   letter-spacing: 0.01em;
-  /* margin-bottom: 15px; */
   font-size: var(--less-big-text);
   line-height: 132%;
 }
@@ -274,8 +280,6 @@ a {
   letter-spacing: 0.01em;
   font-size: var(--less-big-text);
   line-height: 171%;
-  /* display: inline-block; */
-  /* margin: 10px 0; */
 }
 
 .other-project {
@@ -329,8 +333,6 @@ a {
 }
 
 .main-article-text {
-  /* display: inline-block; */
-  /* margin: 10px 0; */
   font-family: "Roboto", sans-serif;
   font-size: var(--less-big-text);
   line-height: 188%;
@@ -344,7 +346,6 @@ a {
   font-family: "Roboto", sans-serif;
   font-size: var(--less-big-text);
   line-height: 171%;
-  text-decoration-line: underline;
 }
 
 .other-article-date {
@@ -352,16 +353,10 @@ a {
   font-size: var(--less-big-text);
   font-weight: 400;
   line-height: 171%;
-  text-decoration-line: underline;
-}
-
-.other-article-arrows {
-  text-decoration-line: underline;
 }
 
 .skills-box {
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
   text-align: center;
@@ -412,6 +407,12 @@ a {
   width: 60px;
   height: 60px;
   margin-bottom: 16px;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.more-socials-circle:hover {
+  transform: scale(1.12);
+  color: var(--secondary);
 }
 
 .icon-heading {
@@ -488,14 +489,12 @@ a {
     bottom: -28px;
   }
 
-  /* CSS data in common pitfalls doc */
   .intro-line {
     border-width: 1.5px;
     width: 60px;
     margin-bottom: 6px;
   }
 
-  /* CSS data in common pitfalls doc */
   .intro-dot {
     height: 15px;
     width: 15px;
@@ -518,7 +517,7 @@ a {
   .thoughts-box {
     display: flex;
     flex-wrap: wrap;
-    /* grid-template-columns: repeat(2, 1fr); */
+    -moz-column-gap: 44px;
     column-gap: 44px;
   }
 
@@ -584,43 +583,27 @@ a {
 
   .header-socials-link {
     font-size: 32px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .header-socials-link:hover {
-    transform: scale(1.12);
-    color: var(--primary);
-  }
-
-  /* figma CSS data */
   .portfolio-name {
     line-height: 132%;
   }
 
-  /* figma CSS data */
-  /* .dev-title { */
-  /* font-size: var(--giant-text); */
-  /* } */
-
-  /* figma CSS data */
   .other-title {
     line-height: 156%;
   }
 
   .intro-text {
-    /* font-size: var(--big-text); */
     line-height: 167%;
     text-align: left;
   }
 
-  /* CSS data in common pitfalls doc */
   .intro-line {
     border-width: 2px;
     width: 80px;
     margin-bottom: 8px;
   }
 
-  /* CSS data in common pitfalls doc */
   .intro-dot {
     height: 20px;
     width: 20px;
@@ -664,22 +647,10 @@ a {
   .project-image,
   .article-image {
     width: 100%;
-    /* height: 306px; */
-  
   }
 
   .project-description {
     line-height: 164%;
-  }
-
-  .other-project-description {
-    line-height: 164%;
-    text-decoration-line: underline;
-  }
-
-  /* adding a space before other project description only on desktop view */
-  .other-project-description::before {
-    content: "\00a0";
   }
 
   .tag {
@@ -696,15 +667,19 @@ a {
 
   .other-project-title {
     line-height: 164%;
-    text-decoration-line: underline;
   }
 
   .other-project-space {
     display: inline;
   }
 
-  .other-project-arrows {
-    text-decoration-line: underline;
+  .other-project-description {
+    line-height: 164%;
+  }
+
+  /* adding a space before other project description only on desktop view */
+  .other-project-description:before {
+    content: "\00a0";
   }
 
   .main-article-date {
@@ -745,12 +720,6 @@ a {
     border: 4px solid var(--primary);
     width: 160px;
     height: 160px;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .more-socials-circle:hover {
-    transform: scale(1.12);
-    color: var(--secondary);
   }
 
   .more-socials-link {
@@ -774,4 +743,10 @@ a {
   .image-box {
     margin-top: 54px;
   }
+
+  .underline-desktop {
+    text-decoration-line: underline;
+    text-underline-position: under;
+  }
+
 }
