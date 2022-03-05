@@ -40,15 +40,6 @@ a {
   cursor: pointer;
 }
 
-.sr-only {
-  position:absolute;
-  left:-10000px;
-  top:auto;
-  width:1px;
-  height:1px;
-  overflow:hidden;
-  }
-
 .header {
   /* width: 100%; */
   height: 520px;
@@ -135,7 +126,10 @@ a {
   color: var(--primary);
 }
 
-.underline {
+.underline,
+.main-project-title:hover,
+.other-project-title:hover,
+.main-article-title:hover {
   text-decoration-line: underline;
   text-underline-position: under;
 }
@@ -232,6 +226,10 @@ a {
   margin-top: 32px;
 }
 
+.article-image-box:hover {
+  outline: 2px solid var(--primary);
+}
+
 .image-overlay {
   position: absolute;
   top: 0;
@@ -326,6 +324,10 @@ a {
   font-size: var(--more-big-text);
   line-height: 119%;
   text-transform: uppercase;
+}
+
+.thoughts-heading-long {
+  display: none;
 }
 
 .main-article-date {
@@ -521,6 +523,10 @@ a {
     margin-top: 65px;
     margin-bottom: 30px;
   }
+
+.thoughts-heading-long {
+  display: inline;
+}
 
   .projects-box,
   .thoughts-box {
