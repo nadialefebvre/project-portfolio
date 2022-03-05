@@ -1,9 +1,9 @@
 :root {
-  --section-back: #f4f4f4;
+  --section-background: #f4f4f4;
   --white: #ffffff;
-  --primary: #fa382f;
-  --primary-light: #fddfe7;
-  --secondary: #072bce;
+  --primary: #2a8d84;
+  --light: #9fd0ac;
+  --secondary: #7d5485;
 
   --giant-text: 40px; /* supposed to be 40 */
   --very-big-text: 24px; /* supposed to be 24 */
@@ -47,7 +47,7 @@ a {
       rgba(32, 32, 32, 0.5),
       rgba(32, 32, 32, 0.5)
     ),
-    url("./images/pexels3.jpg");
+    url("./images/pexels-pixabay-163116.jpg");
   background-position-x: 50%;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -69,8 +69,7 @@ a {
 
 .header-text-box {
   position: absolute;
-  /* I tweaked a little bit the top position since I added a second subtitle */
-  top: 130px;
+  top: 146px;
   left: 0;
   color: var(--white);
   display: flex;
@@ -147,7 +146,7 @@ a {
 }
 
 .section:nth-child(2n) {
-  background-color: var(--section-back);
+  background-color: var(--section-background);
 }
 
 .section:nth-child(2n + 1) {
@@ -314,7 +313,7 @@ a {
   line-height: 122%;
   text-align: center;
   letter-spacing: 0.01em;
-  background-color: var(--primary-light);
+  background-color: var(--light);
   padding: 5px;
   margin-right: 6px;
 }
@@ -491,8 +490,7 @@ a {
   }
 
   .header-text-box {
-    /* I tweaked a little bit the top position since I added a second subtitle */
-    top: 160px;
+    top: 176px;
   }
 
   .header-profile-picture {
@@ -567,8 +565,7 @@ a {
   }
 
   .header-text-box {
-    /* I tweaked a little bit the top position since I added a second subtitle */
-    top: 190px;
+    top: 206px;
   }
 
   .header-profile-picture {
