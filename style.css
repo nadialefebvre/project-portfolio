@@ -52,10 +52,10 @@ a {
 .header {
   height: 520px;
   background-image: linear-gradient(
-      rgba(150, 150, 150, 0.4),
-      rgba(150, 150, 150, 0.4)
+      rgba(100, 100, 100, 0.4),
+      rgba(100, 100, 100, 0.4)
     ),
-    url("./images/unsplash2.jpeg");
+    url("./images/typewriter-mobile.jpg");
   background-position-x: 50%;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -421,6 +421,14 @@ a {
     --tiny-text: 13px;
   }
 
+  .header {
+    background-image: linear-gradient(
+      rgba(100, 100, 100, 0.4),
+      rgba(100, 100, 100, 0.4)
+    ),
+    url("./images/typewriter-tablet.jpg");
+  }
+
   .header,
   .header-box {
     height: 594px;
@@ -518,6 +526,14 @@ a {
   .footer-email:hover {
     text-decoration-line: underline;
     text-underline-position: under;
+  }
+
+  .header {
+    background-image: linear-gradient(
+      rgba(100, 100, 100, 0.4),
+      rgba(100, 100, 100, 0.4)
+    ),
+    url("./images/typewriter-desktop.jpg");
   }
 
   .header,
