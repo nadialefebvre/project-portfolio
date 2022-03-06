@@ -223,6 +223,7 @@ a {
   bottom: 0;
   left: 0;
   background: rgba(100, 100, 100, 0.4);
+  font-family: "Montserrat", sans-serif;
   color: var(--white);
   display: flex;
   align-items: center;
@@ -324,7 +325,6 @@ a {
 
 .skills-box {
   font-family: "Roboto", sans-serif;
-  line-height: 171%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -336,12 +336,16 @@ a {
   color: var(--primary);
   font-size: var(--small-text);
   text-transform: uppercase;
+  line-height: 171%;
+
 }
 
 .skills-list {
   list-style-type: none;
   font-size: var(--small-text);
   letter-spacing: 0.01em;
+  line-height: 171%;
+
 }
 
 .more-socials {
