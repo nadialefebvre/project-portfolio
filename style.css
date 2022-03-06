@@ -1,26 +1,22 @@
 :root {
   --section-background: #f4f4f4;
   --white: #ffffff;
-  --primary: #2a8d84;
-  --light: #9fd0ac;
-  --secondary: #7d5485;
-
-  --giant-text: 40px; /* supposed to be 40 */
-  --very-big-text: 24px; /* supposed to be 24 */
-  --medium-big-text: 22px; /* supposed to be 22 */
-  --more-big-text: 21px; /* supposed to be 21 */
-  --big-text: 17px; /* supposed to be 17 */
-  --less-big-text: 17px; /* supposed to be 17 */
-  --bigger-medium-text: 21px; /* supposed to be 21 */
-  --medium-text: 13px; /* supposed to be 13 */
-  --small-text: 11px; /* supposed to be 11 */
-  --very-small-text: 9px; /* supposed to be 9 */
+  --primary: #127c8a;
+  --light: #A9D5DA;
+  --secondary: #a02334;
+  --oversized-text: 40px;
+  --giant-text: 24px;
+  --super-big-text: 22px;
+  --very-big-text: 21px;
+  --big-text: 21px;
+  --medium-text: 17px;
+  --small-text: 17px;
+  --very-small-text: 13px;
+  --super-small-text: 11px;
+  --tiny-text: 9px;
 }
 
-/* need to find my own background image, colors and change my profile picture */
-
 * {
-  /* outline: 1px solid orange; */
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -40,83 +36,6 @@ a {
   cursor: pointer;
 }
 
-.header {
-  /* width: 100%; */
-  height: 520px;
-  background-image: linear-gradient(
-      rgba(32, 32, 32, 0.5),
-      rgba(32, 32, 32, 0.5)
-    ),
-    url("./images/pexels-pixabay-163116.jpg");
-  background-position-x: 50%;
-  background-position-y: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.header-box {
-  position: relative;
-  height: 520px;
-}
-
-.header-socials {
-  display: flex;
-  position: absolute;
-  top: 48px;
-  right: 0;
-  color: var(--white);
-}
-
-.header-text-box {
-  position: absolute;
-  top: 146px;
-  left: 0;
-  color: var(--white);
-  display: flex;
-  flex-direction: column;
-}
-
-.header-socials-link {
-  text-decoration: none;
-  color: var(--white);
-  font-size: 16px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header-socials-link:hover {
-  transform: scale(1.12);
-  color: var(--primary);
-}
-
-.header-socials-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 5px;
-  border: 1.5px solid var(--white);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-}
-
-.header-profile-picture {
-  width: 180px;
-  border-radius: 50%;
-  border: 2px solid var(--white);
-  position: absolute;
-  bottom: -16px;
-  right: 0;
-}
-
-.portfolio-name {
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-  font-size: var(--medium-text);
-  line-height: 138%;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
 .bold {
   font-weight: 700;
 }
@@ -125,24 +44,92 @@ a {
   color: var(--primary);
 }
 
-.underline,
-.main-project-title:hover,
-.other-project-title:hover,
-.main-article-title:hover {
+.underline {
   text-decoration-line: underline;
   text-underline-position: under;
 }
 
+.header {
+  height: 520px;
+  background-image: linear-gradient(
+      rgba(150, 150, 150, 0.4),
+      rgba(150, 150, 150, 0.4)
+    ),
+    url("./images/unsplash2.jpeg");
+  background-position-x: 50%;
+  background-position-y: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
+}
+
+.header-box {
+  position: relative;
+  height: 520px;
+}
+
+.header-box,
+.section-box {
+  width: 327px;
+  margin: 0 auto;
+}
+
+.header-socials {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  display: flex;
+}
+
+.header-socials-link {
+  font-size: 16px;
+}
+
+.header-socials-circle {
+  width: 40px;
+  height: 40px;
+  margin-left: 5px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-text-box {
+  position: absolute;
+  top: 146px;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio-name {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: var(--very-small-text);
+  line-height: 138%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
 
 .dev-title {
-  /* letter-spacing doesn't seem to be 0 in Figma... */
-  font-size: var(--giant-text);
+  font-size: var(--oversized-text);
   line-height: 122%;
 }
 
 .other-title {
-  font-size: var(--very-big-text);
+  font-size: var(--giant-text);
   line-height: 167%;
+}
+
+.header-profile-picture {
+  position: absolute;
+  bottom: -16px;
+  right: 0;
+  width: 180px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
 }
 
 .section:nth-child(2n) {
@@ -153,55 +140,34 @@ a {
   background-color: var(--white);
 }
 
-.header-box,
-.section-box {
-  width: 327px;
-  margin: 0 auto;
-}
-
 .section {
   padding: 40px 0;
 }
 
 .intro-text {
-  font-size: var(--big-text);
+  font-size: var(--medium-text);
   line-height: 171%;
-  text-align: left;
 }
 
-/* CSS data in common pitfalls doc : sizes need to be adjusted for mobile */
 .intro-line {
-  border: 1px solid var(--primary);
   width: 40px;
-  display: inline-block;
   margin-bottom: 4px;
-}
-
-/* CSS data in common pitfalls doc : sizes need to be adjusted for mobile */
-.intro-dot {
-  height: 10px;
-  width: 10px;
-  background-color: var(--primary);
-  border-radius: 50%;
+  border: 1px solid var(--primary);
   display: inline-block;
 }
 
-.tech-text {
-  font-size: var(--big-text);
-  line-height: 171%;
-  text-align: center;
+.intro-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: inline-block;
 }
 
 .heading-box {
+  margin-bottom: 40px;
   display: flex;
   justify-content: center;
-  margin-bottom: 40px;
-}
-
-.subheading-box {
-  text-align: center;
-  margin-top: 50px;
-  margin-bottom: 20px;
 }
 
 .section-heading {
@@ -210,26 +176,47 @@ a {
   padding: 0 4px;
   color: var(--white);
   background-color: var(--primary);
-  font-size: var(--medium-big-text);
+  font-size: var(--super-big-text);
   line-height: 122%;
 }
 
-.projects-box article,
-.thoughts-box article {
+.tech-text {
+  font-size: var(--medium-text);
+  line-height: 171%;
+  text-align: center;
+}
+
+.section-subheading-box {
+  text-align: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+
+.main-projects-box,
+.other-projects-box,
+.main-thoughts-box,
+.other-thoughts-box {
+  font-family: "Roboto", sans-serif;
+}
+
+.main-projects-box article,
+.main-thoughts-box article {
   width: 327px;
 }
 
 .project-image-box,
-.article-image-box {
+.thought-image-box {
   position: relative;
   margin-top: 32px;
 }
 
-.article-image-box:hover {
-  outline: 2px solid var(--primary);
+.project-image,
+.thought-image {
+  width: 100%;
+  display: inherit;
 }
 
-.image-overlay {
+.project-image-overlay {
   position: absolute;
   top: 0;
   right: 0;
@@ -243,59 +230,20 @@ a {
   text-align: center;
   text-transform: uppercase;
   font-size: 28px;
-  transition: 0.3s ease;
-}
-
-.image-overlay:hover {
-  background-color: transparent;
-  color: transparent;
-}
-
-.project-image,
-.article-image {
-  width: 100%;
-  /* important so there isn't a line with overlay below : it can be inherit, flex, block, to check*/
-  display: inherit;
-  /* height: 212px; */
-  /* is it useful? */
-  -o-object-fit: cover;
-  object-fit: cover;
 }
 
 .main-project-title {
-  font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   color: var(--primary);
   letter-spacing: 0.01em;
-  font-size: var(--less-big-text);
+  font-size: var(--small-text);
   line-height: 171%;
   margin-top: 32px;
 }
 
-.other-project-title {
-  font-family: "Roboto", sans-serif;
-  text-transform: uppercase;
-  color: var(--primary);
-  letter-spacing: 0.01em;
-  font-size: var(--less-big-text);
-  line-height: 132%;
-}
-
 .project-description {
-  font-family: "Roboto", sans-serif;
   letter-spacing: 0.01em;
-  font-size: var(--less-big-text);
-  line-height: 171%;
-}
-
-.other-project {
-  margin-top: 40px;
-}
-
-.other-project-description {
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 0.01em;
-  font-size: var(--less-big-text);
+  font-size: var(--small-text);
   line-height: 171%;
 }
 
@@ -306,10 +254,7 @@ a {
 }
 
 .tag {
-  display: flex;
-  align-items: center;
-  font-family: "Roboto", sans-serif;
-  font-size: var(--very-small-text);
+  font-size: var(--tiny-text);
   line-height: 122%;
   text-align: center;
   letter-spacing: 0.01em;
@@ -320,52 +265,66 @@ a {
 
 .section-subheading {
   color: var(--primary);
-  font-size: var(--more-big-text);
+  font-size: var(--very-big-text);
   line-height: 119%;
   text-transform: uppercase;
+}
+
+.other-project {
+  margin-top: 40px;
+}
+
+.other-project-title {
+  text-transform: uppercase;
+  color: var(--primary);
+  letter-spacing: 0.01em;
+  font-size: var(--small-text);
+  line-height: 132%;
+}
+
+.other-project-description {
+  letter-spacing: 0.01em;
+  font-size: var(--small-text);
+  line-height: 171%;
 }
 
 .thoughts-heading-long {
   display: none;
 }
 
-.main-article-date {
-  font-family: "Roboto", sans-serif;
-  font-size: var(--less-big-text);
+.main-thought-date {
+  font-size: var(--small-text);
   line-height: 176%;
   margin-top: 32px;
 }
 
-.main-article-title {
-  font-family: "Roboto", sans-serif;
-  font-size: var(--bigger-medium-text);
+.main-thought-title {
+  font-size: var(--big-text);
   line-height: 143%;
 }
 
-.main-article-text {
-  font-family: "Roboto", sans-serif;
-  font-size: var(--less-big-text);
+.main-thought-text {
+  font-size: var(--small-text);
   line-height: 188%;
 }
 
-.other-article {
+.other-thought {
   margin-top: 24px;
-}
-
-.other-article-title {
-  font-family: "Roboto", sans-serif;
-  font-size: var(--less-big-text);
   line-height: 171%;
 }
 
-.other-article-date {
-  font-family: "Roboto", sans-serif;
-  font-size: var(--less-big-text);
+.other-thought-title {
+  font-size: var(--small-text);
+}
+
+.other-thought-date {
+  font-size: var(--small-text);
   font-weight: 400;
-  line-height: 171%;
 }
 
 .skills-box {
+  font-family: "Roboto", sans-serif;
+  line-height: 171%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -375,17 +334,13 @@ a {
 
 .skills-subheading {
   color: var(--primary);
-  font-family: "Roboto", sans-serif;
-  font-size: var(--less-big-text);
-  line-height: 171%;
+  font-size: var(--small-text);
   text-transform: uppercase;
 }
 
 .skills-list {
-  font-family: "Roboto", sans-serif;
   list-style-type: none;
-  font-size: var(--less-big-text);
-  line-height: 171%;
+  font-size: var(--small-text);
   letter-spacing: 0.01em;
 }
 
@@ -395,7 +350,6 @@ a {
 }
 
 .more-socials-link {
-  text-decoration: none;
   color: var(--primary);
   font-size: 24px;
 }
@@ -409,26 +363,20 @@ a {
 }
 
 .more-socials-circle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid var(--primary);
-  border-radius: 50%;
   width: 60px;
   height: 60px;
   margin-bottom: 16px;
-  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.more-socials-circle:hover {
-  transform: scale(1.12);
-  color: var(--secondary);
+  border: 2px solid var(--primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .icon-heading {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.01em;
-  font-size: var(--small-text);
+  font-size: var(--super-small-text);
   line-height: 118%;
   text-align: center;
   text-transform: uppercase;
@@ -436,43 +384,41 @@ a {
 
 .footer {
   height: 302px;
+  background-color: var(--secondary);
+  color: var(--white);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--secondary);
-  color: var(--white);
 }
 
 .footer-heading {
+  font-size: var(--very-big-text);
+  line-height: 119%;
   color: var(--white);
   text-transform: uppercase;
-  font-size: var(--more-big-text);
-  line-height: 119%;
 }
 
 .footer-box {
-  font-size: var(--big-text);
+  font-size: var(--medium-text);
   line-height: 147%;
   text-align: center;
   margin-top: 41px;
 }
 
 /* ---------- Media query for tablet ---------- */
-
 @media screen and (min-width: 768px) {
   :root {
-    /* average between mobile and desktop font sizes */
-    --giant-text: 61px; /* supposed to be 40 */
-    --very-big-text: 37px; /* supposed to be 24 */
-    --medium-big-text: 35px; /* supposed to be 22 */
-    --more-big-text: 30px; /* supposed to be 21 */
-    --big-text: 24px; /* supposed to be 17 */
-    --less-big-text: 21px; /* supposed to be 17 */
-    --bigger-medium-text: 26px; /* supposed to be 21 */
-    --medium-text: 21px; /* supposed to be 13 */
-    --small-text: 18px; /* supposed to be 11 */
-    --very-small-text: 13px; /* supposed to be 9 */
+    --oversized-text: 61px;
+    --giant-text: 37px;
+    --super-big-text: 35px;
+    --very-big-text: 30px;
+    --big-text: 26px;
+    --medium-text: 24px;
+    --small-text: 21px;
+    --very-small-text: 21px;
+    --super-small-text: 18px;
+    --tiny-text: 13px;
   }
 
   .header,
@@ -489,6 +435,17 @@ a {
     top: 75px;
   }
 
+  .header-socials-link {
+    font-size: 24px;
+  }
+
+  .header-socials-circle {
+    width: 60px;
+    height: 60px;
+    margin-left: 7.5px;
+    border: 1.5px solid var(--white);
+  }
+
   .header-text-box {
     top: 176px;
   }
@@ -496,6 +453,10 @@ a {
   .header-profile-picture {
     width: 257px;
     bottom: -28px;
+  }
+
+  .section {
+    padding: 80px 0;
   }
 
   .intro-line {
@@ -509,29 +470,25 @@ a {
     width: 15px;
   }
 
-  .section {
-    padding: 80px 0;
-  }
-
   .heading-box {
     margin-bottom: 60px;
   }
 
-  .subheading-box {
-    margin-top: 65px;
-    margin-bottom: 30px;
-  }
-
-.thoughts-heading-long {
-  display: inline;
-}
-
-  .projects-box,
-  .thoughts-box {
+  .main-projects-box,
+  .main-thoughts-box {
     display: flex;
     flex-wrap: wrap;
     -moz-column-gap: 44px;
     column-gap: 44px;
+  }
+
+  .section-subheading-box {
+    margin-top: 65px;
+    margin-bottom: 30px;
+  }
+
+  .thoughts-heading-long {
+    display: inline;
   }
 
   .footer {
@@ -540,24 +497,37 @@ a {
 }
 
 /* ---------- Media query for desktop ---------- */
-
 @media screen and (min-width: 1148px) {
   :root {
-    --giant-text: 82px; /* supposed to be 82 */
-    --very-big-text: 50px; /* supposed to be 50 */
-    --medium-big-text: 48px; /* supposed to be 48 */
-    --more-big-text: 38px; /* supposed to be 38 */
-    --big-text: 30px; /* supposed to be 30 */
-    --less-big-text: 25px; /* supposed to be 25 */
-    --bigger-medium-text: 30px; /* supposed to be 30 */
-    --medium-text: 28px; /* supposed to be 28 */
-    --small-text: 25px; /* supposed to be 25 */
-    --very-small-text: 16px; /* supposed to be 16 */
+    --oversized-text: 82px;
+    --giant-text: 50px;
+    --super-big-text: 48px;
+    --very-big-text: 38px;
+    --big-text: 30px;
+    --medium-text: 30px;
+    --small-text: 25px;
+    --very-small-text: 28px;
+    --super-small-text: 25px;
+    --tiny-text: 16px;
+  }
+
+  .underline-desktop,
+  .main-project-title:hover,
+  .other-project-title:hover,
+  .main-thought-title:hover,
+  .footer-email:hover {
+    text-decoration-line: underline;
+    text-underline-position: under;
   }
 
   .header,
   .header-box {
     height: 668px;
+  }
+
+  .header-box,
+  .section-box {
+    width: 1100px;
   }
 
   .header-socials {
@@ -573,17 +543,14 @@ a {
     bottom: -40px;
   }
 
-  .footer {
-    height: 570px;
+  .header-socials-link {
+    font-size: 32px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .header-box,
-  .section-box {
-    width: 1100px;
-  }
-
-  .section {
-    padding: 120px 0;
+  .header-socials-link:hover {
+    transform: scale(1.12);
+    color: var(--secondary);
   }
 
   .header-socials-circle {
@@ -591,10 +558,6 @@ a {
     height: 80px;
     margin-left: 10px;
     border: 2px solid var(--white);
-  }
-
-  .header-socials-link {
-    font-size: 32px;
   }
 
   .portfolio-name {
@@ -605,9 +568,14 @@ a {
     line-height: 156%;
   }
 
-  .intro-text {
+  .section {
+    padding: 120px 0;
+  }
+
+  .intro-text,
+  .tech-text,
+  .footer-box {
     line-height: 167%;
-    text-align: left;
   }
 
   .intro-line {
@@ -621,18 +589,8 @@ a {
     width: 20px;
   }
 
-  .tech-text {
-    line-height: 167%;
-    letter-spacing: 0.01em;
-  }
-
   .heading-box {
     margin-bottom: 80px;
-  }
-
-  .subheading-box {
-    margin-top: 80px;
-    margin-bottom: 40px;
   }
 
   .section-heading {
@@ -640,28 +598,48 @@ a {
     line-height: 122%;
   }
 
-  .main-project-title {
-    margin-top: 45px;
-    line-height: 164%;
+  .tech-text {
+    letter-spacing: 0.01em;
   }
 
-  .projects-box article,
-  .thoughts-box article {
+  .main-projects-box article,
+  .main-thoughts-box article {
     width: 523px;
   }
 
   .project-image-box,
-  .article-image-box {
+  .thought-image-box {
     position: relative;
     margin-top: 45px;
   }
 
   .project-image,
-  .article-image {
+  .thought-image {
     width: 100%;
   }
 
-  .project-description {
+  .project-image-overlay {
+    transition: 0.3s ease;
+  }
+
+  .project-image-overlay:hover {
+    background-color: transparent;
+    color: transparent;
+  }
+
+  .main-project-title {
+    margin-top: 45px;
+  }
+
+  .main-project-title,
+  .project-description,
+  .other-project-title,
+  .other-project-description,
+  .main-thought-date,
+  .main-thought-text,
+  .skills-subheading,
+  .skills-list,
+  .icon-heading {
     line-height: 164%;
   }
 
@@ -669,7 +647,13 @@ a {
     line-height: 131%;
   }
 
-  .section-subheading {
+  .section-subheading-box {
+    margin-top: 80px;
+    margin-bottom: 40px;
+  }
+
+  .section-subheading,
+  .footer-heading {
     line-height: 124%;
   }
 
@@ -677,88 +661,49 @@ a {
     display: flex;
   }
 
-  .other-project-title {
-    line-height: 164%;
-  }
-
-  .other-project-space {
-    display: inline;
-  }
-
-  .other-project-description {
-    line-height: 164%;
-  }
-
-  /* adding a space before other project description only on desktop view */
   .other-project-description:before {
     content: "\00a0";
   }
 
-  .main-article-date {
-    line-height: 164%;
+  .thought-image-box:hover {
+    outline: 3px solid var(--secondary);
+  }
+
+  .main-thought-date {
     margin-top: 60px;
   }
 
-  .main-article-title {
+  .main-thought-title {
     line-height: 137%;
   }
 
-  .main-article-text {
-    line-height: 164%;
-  }
-
-  .other-article-date {
+  .other-thought-title,
+  .other-thought-date {
     line-height: 132%;
-  }
-
-  .other-article-title {
-    line-height: 132%;
-  }
-
-  .skills-subheading {
-    line-height: 164%;
-  }
-
-  .skills-list {
-    font-family: "Roboto", sans-serif;
-    list-style-type: none;
-    margin: 0;
-    line-height: 164%;
-    letter-spacing: 0.01em;
-    padding: 6px 0 0 0;
-  }
-
-  .more-socials-circle {
-    border: 4px solid var(--primary);
-    width: 160px;
-    height: 160px;
   }
 
   .more-socials-link {
     font-size: 60px;
   }
 
-  .icon-heading {
-    line-height: 164%;
+  .more-socials-circle {
+    border: 4px solid var(--primary);
+    width: 160px;
+    height: 160px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
-  .footer-heading {
-    color: var(--white);
-    text-transform: uppercase;
-    line-height: 124%;
+  .more-socials-circle:hover {
+    transform: scale(1.12);
+    color: var(--secondary);
   }
 
-  .footer-box {
-    line-height: 167%;
+  .footer {
+    height: 570px;
   }
 
-  .image-box {
+  .project-image-box,
+  .thought-image-box {
     margin-top: 54px;
   }
-
-  .underline-desktop {
-    text-decoration-line: underline;
-    text-underline-position: under;
-  }
-
 }
