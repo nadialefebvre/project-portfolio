@@ -645,6 +645,8 @@ a {
   .project-image-overlay:hover {
     background-color: transparent;
     color: transparent;
+    outline: 3px solid var(--secondary);
+
   }
 
   .main-project-title {
@@ -683,6 +685,10 @@ a {
 
   .other-project-description:before {
     content: "\00a0";
+  }
+
+  .thought-image-box {
+    transition: 0.3s ease;
   }
 
   .thought-image-box:hover {
