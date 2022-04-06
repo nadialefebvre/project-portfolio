@@ -262,6 +262,7 @@ a {
   background-color: var(--light);
   padding: 5px;
   margin-right: 6px;
+  margin-bottom: 6px;
 }
 
 .section-subheading {
