@@ -49,6 +49,10 @@ a {
   text-underline-position: under;
 }
 
+.italic {
+  font-style: italic;
+}
+
 .header {
   height: 520px;
   background-image: linear-gradient(
@@ -516,12 +520,13 @@ a {
     --giant-text: 50px;
     --super-big-text: 48px;
     --very-big-text: 38px;
-    --big-text: 30px;
+    /* maybe make the fonts smaller? */
+    /* --big-text: 30px;
     --medium-text: 30px;
-    --small-text: 25px;
+    --small-text: 25px; */
     --very-small-text: 28px;
     --super-small-text: 25px;
-    --tiny-text: 16px;
+    /* --tiny-text: 16px; */
   }
 
   .underline-desktop,
@@ -727,6 +732,10 @@ a {
 
   .footer {
     height: 570px;
+  }
+
+  .footer-box {
+    font-size: 30px;
   }
 
   .project-image-box,
