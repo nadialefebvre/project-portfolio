@@ -1,10 +1,3 @@
-# Weekly project for Technigo's bootcamp, week 8
-Task: build a portfolio
-
-Tech: HTML, CSS
-
-----
-
 # Week 8: portfolio
 
 For this project, we had to create a responsive webpage based on a design in Figma for our portfolio, with focus on accessibility.
