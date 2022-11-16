@@ -1,4 +1,6 @@
-# Week 8: portfolio
+# Project Portfolio v1
+
+Weekly project for Technigo's bootcamp, week 8: build a portfolio
 
 For this project, I had to create a responsive webpage based on a design in Figma for our portfolio, with focus on accessibility.
 
