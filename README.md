@@ -9,3 +9,7 @@ No JavaScript in this project, only HTML and CSS. I used validating tools to ass
 ## View it live
 
 Project deployed here: [Nadia Lefebvre | Portfolio](https://nadialefebvre.dev/)
+
+<div align="center">
+  <img src="screenshot.jpg" />
+</div>
