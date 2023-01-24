@@ -8,9 +8,9 @@ No JavaScript in this project, only HTML and CSS. I used validating tools to ass
 
 ## View it live
 
-Project deployed here: [Nadia Lefebvre | Portfolio](https://nadialefebvre.dev/)
+Project deployed here: [Nadia Lefebvre | Portfolio](https://nadialefebvre.netlify.app/)
 
-**This version haven't been updated since final project for Technigo's bootcamp (June 2022), please check my version 2 here: [Portfolio v2](https://github.com/nadialefebvre/project-portfolio-v2), which is made with React and TypeScript, among others.
+**This version haven't been updated since final project for Technigo's bootcamp (June 2022), please check my repo for version 2 here: [Portfolio v2](https://github.com/nadialefebvre/project-portfolio-v2), which is made with React and TypeScript, among others.
 
 <div align="center">
   <img src="screenshot.jpg" />
