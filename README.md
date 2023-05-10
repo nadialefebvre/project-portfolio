@@ -1,6 +1,14 @@
 # Project Portfolio v1
 
-Weekly project for Technigo's bootcamp, week 8: build a portfolio
+Weekly project for Technigo's bootcamp, week 8: build a portfolio (March 2022)
+
+## Tech stack
+
+- HTML
+- CSS
+- Figma
+
+## The problem
 
 For this project, I had to create a responsive webpage based on a design in Figma for our portfolio, with focus on accessibility.
 
